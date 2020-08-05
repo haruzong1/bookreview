@@ -39,7 +39,7 @@ def read_reviews():
     reviews = list(db.review.find(condition, {'_id':0})) # pymongo가 주는 리스트를 json으로 사용할 수 있는 파이썬 리스트로 변경
     result = {
         'result':'success',
-        'receives': reviews
+        'reviews': reviews
     }
     return jsonify(result)
 
