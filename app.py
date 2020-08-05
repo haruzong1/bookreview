@@ -17,12 +17,12 @@ def home():
 def write_review():
     # 1. 클라이언트가 준 title, author, review 가져오기.
     title_receive =request.form['title_give']
-    author_receive = request.form('author_give')
-    review_receive = request.form('review_give')
+    author_receive = request.form['author_give']
+    review_receive = request.form['review_give']
 
     # 2. DB에 정보 삽입하기
     document = {
-        'title': author_receive,
+        'title': title_receive,
         'author': author_receive,
         'review': review_receive,
     }
